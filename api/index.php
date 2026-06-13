@@ -1,5 +1,9 @@
 <?php
 
+// Fix Laravel base path / subfolder issue on Vercel
+$_SERVER['SCRIPT_NAME'] = '/index.php';
+$_SERVER['PHP_SELF'] = '/index.php';
+
 // ====================================================
 // Vercel Serverless: Inisialisasi Direktori /tmp
 // Vercel menggunakan filesystem read-only kecuali /tmp
