@@ -133,10 +133,10 @@ function renderShipment(container, data) {
                     <p class="text-sm text-gray-500 mt-2"><i class="fa-solid fa-truck text-sm mr-1"></i> Total: ${item.jumlah_porsi} Porsi</p>
                 </div>
                 <div class="flex justify-end gap-3 mt-6 border-t border-gray-50 pt-4">
-                    <a href="/kelola/shipment?id=${item.id}" class="text-gray-400 hover:text-[#33A1E0] transition-all text-sm">
+                    <a href="/kelola/distribusi?id=${item.id_shipment}" class="text-gray-400 hover:text-[#33A1E0] transition-all text-sm">
                         <i class="fa-solid fa-pen-to-square"></i> Edit
                     </a>
-                    <button onclick="deleteItem('/api/shipments/${item.id}')" class="text-gray-400 hover:text-red-500 transition-all text-sm">
+                    <button onclick="deleteItem('/api/shipments/${item.id_shipment}')" class="text-gray-400 hover:text-red-500 transition-all text-sm">
                         <i class="fa-solid fa-trash-can"></i> Hapus
                     </button>
                 </div>

@@ -6,7 +6,7 @@
     <title>Kirim Paket MBG | MBG - Barokah</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
@@ -127,7 +127,6 @@
         </div>
     </main>
 
-    <script src="{{ asset('js/api.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 
     <script>
@@ -231,8 +230,8 @@
                 document.getElementById('id_menu').value = data.id_menu;
                 document.getElementById('id_dapur').value = data.id_dapur;
                 document.getElementById('jumlah_porsi').value = data.jumlah_porsi;
-                document.getElementById('status').value = data.status;
-                document.getElementById('waktu_sampai').value = data.waktu_sampai;
+                document.getElementById('status').value = data.status_kirim;
+                document.getElementById('waktu_sampai').value = data.waktu_sampai ? data.waktu_sampai.split(' ')[0].split('T')[0] : '';
 
                 document.getElementById('form-title').innerText = "Edit Distribusi";
                 document.getElementById('btn-submit').innerHTML = "<i class='fa-solid fa-pen-to-square'></i> UPDATE PENGIRIMAN";

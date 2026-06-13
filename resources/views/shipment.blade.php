@@ -38,7 +38,7 @@
     </header>
 
     <main class="max-w-[1400px] mx-auto p-10">
-        <div id="distribusi-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="live-tracking-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="col-span-full py-20 text-center">
                 <i class="fa-solid fa-truck-fast animate-bounce text-[#33A1E0] text-4xl mb-4"></i>
                 <p class="text-gray-400 italic">Melacak armada distribusi...</p>
@@ -54,7 +54,7 @@
         });
 
         async function fetchLiveTracking() {
-            const container = document.getElementById('distribusi-container');
+            const container = document.getElementById('live-tracking-container');
             
             try {
                 const response = await axios.get('/api/shipments');
