@@ -3,15 +3,7 @@
 // Fix Laravel base path / subfolder issue on Vercel
 $_SERVER['SCRIPT_NAME'] = '/index.php';
 $_SERVER['PHP_SELF'] = '/index.php';
-
-if (isset($_GET['debug_vercel'])) {
-    header('Content-Type: text/plain');
-    print_r([
-        'server' => $_SERVER,
-        'get' => $_GET,
-    ]);
-    exit;
-}
+unset($_SERVER['PATH_INFO']);
 
 // ====================================================
 // Vercel Serverless: Inisialisasi Direktori /tmp
