@@ -18,8 +18,12 @@ $app = Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 
-if (env('VERCEL')) {
-    $app->useStoragePath('/tmp/storage');
+// Jika berjalan di Vercel, gunakan /tmp/storage (writable directory)
+// APP_STORAGE di-set oleh api/index.php sebelum Laravel boot
+if ($storagePath = getenv('APP_STORAGE')) {
+    $app->useStoragePath($storagePath);
 }
 
 return $app;
+
+
